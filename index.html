@@ -17,11 +17,37 @@
   <link rel="icon" type="image/x-icon" href="images/name-logo.png" />
   <link rel="stylesheet" href="style.css" />
   <script src="script.js" defer></script>
+  <link rel="stylesheet" href="nav.css">
+  <script src="nav.js"></script>
 </head>
 
 <body>
-  <section id="nav-menu">
-    <!-- <img id="logo" src="images/name-logo.png" alt="name" /> -->
+  <nav class="navbar">
+    <div class="menu-toggle" id="menuToggle">
+      <div class="bar"></div>
+      <div class="bar"></div>
+      <div class="bar"></div>
+    </div>
+    <ul class="menu" id="menu">
+      <li><a href="#home">Home</a></li>
+      <li><a href="#about">About</a></li>
+      <li><a href="#skills">Skills</a></li>
+      <li><a href="#projects">Projects</a></li>
+      <li><a href="#contact">Contact</a></li>
+      <li>
+        <h5 class="nav-link resume">
+          <button id="resume-button-1">
+            <a id="resume-link-1" href="/Devender-Shakya-Resume.pdf" target="_blank" download="Devender-Shakya-Resume">Resume</a>
+          </button>
+        </h5>
+      </li>
+    </ul>
+  </nav>
+
+
+
+  <!-- <section id="nav-menu">
+   
     <div>
       <div class="nav-link home"><a href="#home">Home</a></div>
       <div class="nav-link about"><a href="#about">About</a></div>
@@ -33,10 +59,9 @@
           <a id="resume-link-1" href="/Devender-Shakya-Rezsume.pdf" target="_blank"
             download="Devender-Shakya-Resume">Resume</a>
         </button>
-
       </h5>
     </div>
-  </section>
+  </section> -->
 
   <section id="home">
     <h1 id="user-detail-name">Hi👋, I am Devender Shakya</h1>

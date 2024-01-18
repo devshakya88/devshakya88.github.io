@@ -1,81 +1,27 @@
-$(document).ready(function () {
-    $(window).scroll(function () {
-      // sticky navbar on scroll script
-      if (this.scrollY > 20) {
-        $(".navbar").addClass("sticky");
-      } else {
-        $(".navbar").removeClass("sticky");
-      }
-  
-      // scroll-up button show/hide script
-      if (this.scrollY > 500) {
-        $(".scroll-up-btn").addClass("show");
-      } else {
-        $(".scroll-up-btn").removeClass("show");
-      }
-    });
-  
-    // slide-up script
-    $(".scroll-up-btn").click(function () {
-      $("html").animate({ scrollTop: 0 });
-      // removing smooth scroll on slide-up button click
-      $("html").css("scrollBehavior", "auto");
-    });
-  
-    $(".navbar .menu li a").click(function () {
-      // applying again smooth scroll on menu items click
-      $("html").css("scrollBehavior", "smooth");
-    });
-  
-    // toggle menu/navbar script
-    $(".nav-link").click(function () {
-      $(".navbar .menu").toggleClass("active");
-      $(".menu-btn i").toggleClass("active");
-    });
-  
-    // typing text animation script
-    // var typed = new Typed(".typing", {
-    //   strings: ["Java Developer", "Coder", "Problem Solver"],
-    //   typeSpeed: 100,
-    //   backSpeed: 60,
-    //   loop: true,
-    // });
+document.addEventListener("DOMContentLoaded", function () {
+  const menuToggle = document.getElementById("menuToggle");
+  const menu = document.getElementById("menu");
+  const navbar = document.querySelector(".navbar");
 
-    
-   
-    /////
-  
-    var typed = new Typed(".typing-2", {
-      strings: ["Java Developer", "Coder", "Problem Solver"],
-      typeSpeed: 100,
-      backSpeed: 60,
-      loop: true,
-    });
-  
-    // owl carousel script
-    $(".carousel").owlCarousel({
-      margin: 20,
-    loop: true,
-      autoplay: true,   //for carousel effect turn it true
-      autoplayTimeOut: 2000,
-      autoplayHoverPause: true,
-      responsive: {
-        0: {
-          items: 1,
-          nav: false,
-        },
-        600: {
-          items: 2,
-          nav: false,
-        },
-        1000: {
-          items: 3,
-          nav: false,
-        },
-      },
-    });
+  menuToggle.addEventListener("click", function () {
+    menu.classList.toggle("active");
+    menuToggle.classList.toggle("active");
   });
 
-  function resume(){
-    window.open('./downloads/Lokesh_Paramkusham_Resume.pdf',"_blank")
+  // Close the menu when a link is clicked
+  const menuItems = menu.getElementsByTagName("a");
+  for (let i = 0; i < menuItems.length; i++) {
+    menuItems[i].addEventListener("click", function () {
+      menu.classList.remove("active");
+      menuToggle.classList.remove("active");
+    });
   }
+
+  // Add an event listener to fix the navbar when a link is clicked
+  for (let i = 0; i < menuItems.length; i++) {
+    menuItems[i].addEventListener("click", function () {
+      navbar.classList.add("fixed");
+    });
+  }
+});
+
