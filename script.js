@@ -7,7 +7,7 @@
 document.querySelector("#resume-link-1").addEventListener("click", () => {
     window.open(
       // location.assign(
-      "https://drive.google.com/file/d/1s5NSF8OzDjexXvByK8FHkAcyidkT5aLG/view?usp=sharing",
+      "https://drive.google.com/file/d/1Ueh9as0-ayRh0qdyrF0x7GATHnifAck_/view?usp=sharing",
       "_blank"
     );
   });
@@ -16,7 +16,7 @@ document.querySelector("#resume-link-1").addEventListener("click", () => {
   document.querySelector("#resume-link-2").addEventListener("click", () => {
     window.open(
       // location.assign(
-      "https://drive.google.com/file/d/1s5NSF8OzDjexXvByK8FHkAcyidkT5aLG/view?usp=sharing",
+      "https://drive.google.com/file/d/1Ueh9as0-ayRh0qdyrF0x7GATHnifAck_/view?usp=sharing",
       "_blank"
     );
   });
@@ -97,4 +97,8 @@ document.querySelector("#resume-link-1").addEventListener("click", () => {
     css.innerHTML = ".typewrite > .wrap { border-right: 0.08em solid #fff}";
     document.body.appendChild(css);
   };
+  
+
+
+
   

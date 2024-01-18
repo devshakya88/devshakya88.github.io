@@ -99,19 +99,7 @@
   #nav-menu div a:hover::after {
     width: 100%;
   }
-  #nav-menu #hamburger {
-    display: none;
-    flex-direction: column;
-    height: 24px;
-    justify-content: space-between;
-    align-items: center;
-    /* margin-right: 36px; */
-  }
-  #nav-menu #hamburger span {
-    width: 30px;
-    height: 4px;
-    background-color: #eae7d7;
-  }
+ 
   
   /* RESUME */
   .resume {
@@ -614,9 +602,7 @@
     #nav-menu {
       height: 30px;
     }
-    #nav-menu #hamburger {
-      display: flex;
-    }
+
     #nav-menu>div:nth-child(2) {
       display: none;
       align-items: center;
@@ -792,10 +778,12 @@
   @media screen and (min-width: 0) and (max-width: 300px) {
     #nav-menu {
       height: 20px;
+      flex-direction: column;
     }
-    #nav-menu #hamburger {
-      display: flex;
-    }
+    #nav-menu > div {
+      flex-direction: column; /* Stack items vertically */
+      width: 100%;
+  }
     #nav-menu>div:nth-child(2) {
       display: none;
       align-items: center;
@@ -810,10 +798,17 @@
       background: linear-gradient(0deg, #116466, #525a5a);
       width: 100%;
     }
+
+    #nav-menu div.nav-link {
+      width: 100%; /* Full width for each nav item */
+      text-align: center; /* Center align the text */
+  }
     #nav-menu div div {
       width: 100%;
       border-bottom: 0.25px solid #eae7d7;
       justify-content: center;
+      background-color: #116466;
+     
     }
     #nav-menu div a {
       margin: 6px 0;
@@ -979,14 +974,6 @@
       font-weight: 500;
       letter-spacing: 1px;
       margin: 0;
-    }
-  }
-  
-  @media screen and (min-width: 0) and (max-width: 220px) {
-    #skills > div {
-      margin: 10px auto;
-      grid-template-columns: 120px;
-      gap: 14px;
     }
   }
   
